@@ -126,8 +126,8 @@
         <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-[#F2A900]"></i> Niali, Cuttack, Odisha, India</span>
       </div>
       <div class="flex items-center gap-6">
-        <a href="tel:919778333974" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +91 97783 33974</a>
-        <a href="tel:919778333974" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +91 90405 66787</a>
+        <a href="tel:+919778333974" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +91 97783 33974</a>
+        <a href="tel:+919040566787" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors"><i data-lucide="phone" class="w-4 h-4"></i> +91 90405 66787</a>
       </div>
     </div>
 
@@ -169,7 +169,7 @@
       <button onclick="navigate('contact')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="contact">Contact</button>
       
       <div class="flex flex-col gap-3 mt-5">
-        <a href="tel:919778333974" class="inline-flex items-center justify-center py-3.5 px-6 font-semibold rounded transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full touch-manipulation">
+        <a href="tel:+919778333974" class="inline-flex items-center justify-center py-3.5 px-6 font-semibold rounded transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full touch-manipulation">
           <i data-lucide="phone" class="w-4 h-4 mr-2"></i> Call Now (+91 97783 33974)
         </a>
         <a href="https://wa.me/919778333974?text=Hello%20Raj%20Trading%2C%20I%20would%20like%20to%20enquire%20about%20agricultural%20machinery." target="_blank" class="inline-flex items-center justify-center py-3.5 px-6 font-semibold rounded transition-all bg-[#25D366] text-white hover:bg-[#1DA851] shadow-md w-full touch-manipulation">
@@ -345,10 +345,11 @@
         </div>
         
         <!-- Filters -->
-        <div class="flex flex-wrap gap-3 mb-10 sm:mb-12 justify-center px-2">
-          <span class="px-5 py-2.5 bg-[#0B5D1E] text-white rounded-full font-semibold cursor-pointer shadow-md text-sm sm:text-base">All Categories</span>
-          <span class="px-5 py-2.5 bg-white text-gray-600 border border-gray-200 rounded-full font-medium hover:bg-gray-100 cursor-pointer text-sm sm:text-base">Combine Harvesters</span>
-          <span class="px-5 py-2.5 bg-white text-gray-600 border border-gray-200 rounded-full font-medium hover:bg-gray-100 cursor-pointer text-sm sm:text-base">Tractors</span>
+        <div id="product-filters" class="flex flex-wrap gap-3 mb-10 sm:mb-12 justify-center px-2">
+          <button data-filter="all" class="filter-btn px-5 py-2.5 rounded-full font-semibold border text-sm sm:text-base touch-manipulation">All Categories</button>
+          <button data-filter="Harvesters" class="filter-btn px-5 py-2.5 rounded-full font-semibold border text-sm sm:text-base touch-manipulation">Combine Harvesters</button>
+          <button data-filter="Tractors" class="filter-btn px-5 py-2.5 rounded-full font-semibold border text-sm sm:text-base touch-manipulation">Tractors</button>
+          <button data-filter="Farm Equipment" class="filter-btn px-5 py-2.5 rounded-full font-semibold border text-sm sm:text-base touch-manipulation">Farm Equipment</button>
         </div>
 
         <!-- Product Grid -->
@@ -400,18 +401,18 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Customer Name *</label>
-                    <input required type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter your name">
+                    <input required name="name" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter your name">
                   </div>
                   <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile Number *</label>
-                    <input required type="tel" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter mobile number">
+                    <input required name="mobile" type="tel" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter mobile number">
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Machine Type</label>
-                    <select class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base bg-white">
+                    <select name="type" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base bg-white">
                       <option>Combine Harvester</option>
                       <option>Tractor</option>
                       <option>Other Equipment</option>
@@ -419,16 +420,16 @@
                   </div>
                   <div>
                     <label class="block text-sm font-semibold text-gray-700 mb-1">Machine Model</label>
-                    <input type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="e.g. LOVOL 1004">
+                    <input name="model" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="e.g. LOVOL 1004">
                   </div>
                 </div>
 
                 <div>
                   <label class="block text-sm font-semibold text-gray-700 mb-1">Description of Issue / Service Required *</label>
-                  <textarea required rows="4" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Describe the problem or required maintenance..."></textarea>
+                  <textarea required name="issue" rows="4" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Describe the problem or required maintenance..."></textarea>
                 </div>
 
-                <button type="submit" class="inline-flex items-center justify-center px-6 py-4 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-base touch-manipulation">Submit Service Request</button>
+                <button type="submit" class="inline-flex items-center justify-center px-6 py-4 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-base touch-manipulation">Send Service Request on WhatsApp</button>
                 <p class="text-xs text-center text-gray-500 mt-4">Or book instantly via <a href="https://wa.me/919778333974" target="_blank" class="text-[#25D366] font-bold hover:underline">WhatsApp</a></p>
               </form>
             </div>
@@ -455,7 +456,7 @@
                <a href="https://wa.me/919778333974" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all bg-[#25D366] text-white hover:bg-[#1DA851] shadow-md touch-manipulation">
                  <i data-lucide="camera" class="w-5 h-5 mr-2"></i> Send Part Photo via WhatsApp
                </a>
-               <a href="tel:919778333974" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all border-2 border-white text-white hover:bg-white hover:text-[#1F2933] touch-manipulation">
+               <a href="tel:+919778333974" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all border-2 border-white text-white hover:bg-white hover:text-[#1F2933] touch-manipulation">
                  Call Now
                </a>
              </div>
@@ -465,17 +466,17 @@
              <div class="bg-white rounded-2xl shadow-sm p-6 text-[#1F2933]">
                 <h3 class="text-xl font-bold mb-4 text-[#0B5D1E]">Quick Part Enquiry Form</h3>
                 <form id="parts-form" class="space-y-4">
-                  <input required type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
-                  <input required type="tel" placeholder="Mobile Number" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                  <input required name="name" type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                  <input required name="mobile" type="tel" placeholder="Mobile Number" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
                   <div class="flex gap-2">
-                    <input type="text" placeholder="Machine Model" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
-                    <input type="text" placeholder="Part No (if known)" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                    <input name="model" type="text" placeholder="Machine Model" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                    <input name="part" type="text" placeholder="Part No (if known)" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
                   </div>
-                  <div class="border-2 border-dashed border-gray-300 rounded-xl p-4 text-center cursor-pointer hover:bg-gray-50 transition-colors">
+                  <div class="border-2 border-dashed border-gray-300 rounded-xl p-4 text-center">
                     <i data-lucide="camera" class="w-6 h-6 mx-auto text-gray-400 mb-2"></i>
-                    <span class="text-xs sm:text-sm font-semibold text-gray-500">Click to Upload Part Photograph (Optional)</span>
+                    <span class="text-xs sm:text-sm font-semibold text-gray-500">Have a photo of the part? Attach it in the WhatsApp chat that opens after you submit.</span>
                   </div>
-                  <button type="submit" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-sm touch-manipulation">Submit Enquiry</button>
+                  <button type="submit" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-sm touch-manipulation">Send Enquiry on WhatsApp</button>
                 </form>
              </div>
            </div>
@@ -522,8 +523,8 @@
                 </div>
                 <div>
                   <h4 class="font-bold text-[#1F2933] text-lg">Contact Numbers</h4>
-                  <p class="text-gray-600 mt-1 text-sm sm:text-base"><a href="tel:919778333974" class="hover:text-[#0B5D1E]">+91 97783 33974</a></p>
-                  <p class="text-gray-600 text-sm sm:text-base"><a href="tel:919040566787" class="hover:text-[#0B5D1E]">+91 90405 66787</a></p>
+                  <p class="text-gray-600 mt-1 text-sm sm:text-base"><a href="tel:+919778333974" class="hover:text-[#0B5D1E]">+91 97783 33974</a></p>
+                  <p class="text-gray-600 text-sm sm:text-base"><a href="tel:+919040566787" class="hover:text-[#0B5D1E]">+91 90405 66787</a></p>
                 </div>
               </div>
               
@@ -606,11 +607,11 @@
           </li>
           <li class="flex items-center gap-3">
             <i data-lucide="phone" class="w-5 h-5 text-[#F2A900] shrink-0"></i>
-            <a href="tel:919778333974" class="hover:text-white transition-colors">+91 97783 33974</a>
+            <a href="tel:+919778333974" class="hover:text-white transition-colors">+91 97783 33974</a>
           </li>
           <li class="flex items-center gap-3">
             <i data-lucide="phone" class="w-5 h-5 text-[#F2A900] shrink-0"></i>
-            <a href="tel:919040566787" class="hover:text-white transition-colors">+91 90405 66787</a>
+            <a href="tel:+919040566787" class="hover:text-white transition-colors">+91 90405 66787</a>
           </li>
         </ul>
       </div>
@@ -627,7 +628,7 @@
 
   <!-- Mobile Bottom Action Bar -->
   <div class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50">
-    <a href="tel:919778333974" class="flex-1 py-3.5 flex flex-col items-center justify-center text-[#1F2933] font-bold text-xs hover:bg-gray-50 border-r border-gray-100 touch-manipulation">
+    <a href="tel:+919778333974" class="flex-1 py-3.5 flex flex-col items-center justify-center text-[#1F2933] font-bold text-xs hover:bg-gray-50 border-r border-gray-100 touch-manipulation">
       <i data-lucide="phone" class="w-5 h-5 mb-1 text-[#0B5D1E]"></i> CALL
     </a>
     <a href="https://wa.me/919778333974" target="_blank" class="flex-1 py-3.5 flex flex-col items-center justify-center text-white bg-[#25D366] font-bold text-xs touch-manipulation">
@@ -659,7 +660,7 @@
     if (productsGrid) {
       PRODUCTS.forEach(product => {
         const productHTML = `
-          <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden flex flex-col h-full">
+          <div data-category="${product.category}" class="product-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden flex flex-col h-full">
             <div class="relative bg-gray-100">
               <img src="${product.img}" alt="${product.name}" class="w-full h-56 sm:h-64 object-contain mix-blend-multiply bg-white" />
               <div class="absolute top-4 right-4 bg-[#F2A900] text-[#1F2933] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
@@ -671,7 +672,7 @@
               <p class="text-gray-600 mb-6 flex-grow text-sm sm:text-base">${product.desc}</p>
               <div class="mt-auto space-y-3">
                 <a href="https://wa.me/919778333974?text=Hello%20Raj%20Trading%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(product.name)}.%20Please%20share%20specifications%2C%20availability%20and%20price." target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-sm sm:text-base touch-manipulation">Enquire Now</a>
-                <a href="tel:919778333974" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] w-full text-sm sm:text-base touch-manipulation">Call to Discuss</a>
+                <a href="tel:+919778333974" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] w-full text-sm sm:text-base touch-manipulation">Call to Discuss</a>
               </div>
             </div>
           </div>
@@ -679,6 +680,29 @@
         productsGrid.innerHTML += productHTML;
       });
     }
+
+    // Product Category Filters
+    function filterProducts(category) {
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.classList.toggle('hidden', category !== 'all' && card.dataset.category !== category);
+      });
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const active = btn.dataset.filter === category;
+        btn.classList.toggle('bg-[#0B5D1E]', active);
+        btn.classList.toggle('text-white', active);
+        btn.classList.toggle('border-[#0B5D1E]', active);
+        btn.classList.toggle('shadow-md', active);
+        btn.classList.toggle('bg-white', !active);
+        btn.classList.toggle('text-gray-600', !active);
+        btn.classList.toggle('border-gray-200', !active);
+        btn.classList.toggle('hover:bg-gray-100', !active);
+      });
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => filterProducts(btn.dataset.filter));
+    });
+    filterProducts('all');
 
     // Render Parts Categories
     const partsGrid = document.getElementById('parts-categories');
@@ -780,15 +804,36 @@
     }
 
     // Form Submissions
+    // Forms open WhatsApp with the details pre-filled, since the site has no backend
+    function sendToWhatsApp(title, fields) {
+      const lines = [title, ...fields.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`)];
+      window.open('https://wa.me/919778333974?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+    }
+
     document.getElementById('service-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Thank you. Your service request has been received. Raj Trading will contact you shortly.');
+      const f = e.target.elements;
+      sendToWhatsApp('Hello Raj Trading, I would like to book a service.', [
+        ['Name', f.name.value.trim()],
+        ['Mobile', f.mobile.value.trim()],
+        ['Machine Type', f.type.value],
+        ['Machine Model', f.model.value.trim()],
+        ['Issue / Service Required', f.issue.value.trim()],
+      ]);
+      showToast('Opening WhatsApp. Please press send in WhatsApp to submit your service request.');
       e.target.reset();
     });
 
     document.getElementById('parts-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Your spare parts enquiry has been sent. We will review it and contact you shortly.');
+      const f = e.target.elements;
+      sendToWhatsApp('Hello Raj Trading, I am looking for a spare part.', [
+        ['Name', f.name.value.trim()],
+        ['Mobile', f.mobile.value.trim()],
+        ['Machine Model', f.model.value.trim()],
+        ['Part No', f.part.value.trim()],
+      ]);
+      showToast('Opening WhatsApp. Please press send, and attach a photo of the part if you have one.');
       e.target.reset();
     });
 
