@@ -34,6 +34,11 @@
     return `tel:${D.business.phones[0].tel}`;
   }
 
+  // Brochures can be a PDF in this site (path from the site root) or a full external link
+  function brochureUrl(model, root) {
+    return /^https?:\/\//.test(model.brochure) ? model.brochure : `${root}${model.brochure}`;
+  }
+
   function modelUrl(model, base) {
     return `${base}${model.id}.html`;
   }
@@ -418,7 +423,7 @@
           <a href="${priceUrl}" ${newTab(D)} class="${btn} ${WA_GREEN} text-white shadow-md sm:col-span-2"><i data-lucide="message-circle" class="w-5 h-5 mr-2" aria-hidden="true"></i> ${esc(b.bestPrice)}${srNewTab(D)}</a>
           <a href="${telUrl(D)}" class="${btn} bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md"><i data-lucide="phone" class="w-5 h-5 mr-2" aria-hidden="true"></i> ${esc(b.callNow)}</a>
           <button type="button" data-open-demo class="${btn} bg-[#F2A900] text-[#1F2933] hover:bg-yellow-500 shadow-md"><i data-lucide="calendar-check" class="w-5 h-5 mr-2" aria-hidden="true"></i> ${esc(b.bookDemo)}</button>
-          <a href="${esc(model.brochure)}" ${newTab(D)} class="${btn} border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] sm:col-span-2"><i data-lucide="file-down" class="w-5 h-5 mr-2" aria-hidden="true"></i> ${esc(b.brochure)}${srNewTab(D)}</a>
+          <a href="${esc(brochureUrl(model, root))}" ${newTab(D)} class="${btn} border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] sm:col-span-2"><i data-lucide="file-down" class="w-5 h-5 mr-2" aria-hidden="true"></i> ${esc(b.brochure)}${srNewTab(D)}</a>
         </div>
       </div>
       <div class="order-1 lg:order-2 bg-gradient-to-br from-[#EAF4EA] to-white rounded-3xl p-4 sm:p-8">

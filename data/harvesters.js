@@ -175,6 +175,7 @@
         name: 'RG102 EVO',
         type: 'Multi-Crop Crawler Combine',
         summary: 'A high-performance, comfortable harvester for efficient work in small to medium-sized fields.',
+        // brochure: a path in this site (e.g. brochures/x.pdf) or a full https:// link
         // value: shown text; num: used to find the best value in the comparison table
         specs: {
           enginePower: { value: '102 ps', num: 102 },
@@ -194,7 +195,7 @@
           'Tuned threshing and cleaning for high output with low grain loss',
         ],
         bestFor: 'Small to medium farms that need one multi-crop machine with low soil compaction.',
-        brochure: 'https://drive.google.com/file/d/1lGPoNq1FXUAoxdsLICvHrK-JZ3ZsUXyc/view?usp=sharing',
+        brochure: 'brochures/lovol-rg102-evo-brochure.pdf',
         officialPage: 'https://lovol.co.in/shop/harvester-rg102evo',
         image: 'images/machinery/rg102-evo.webp',
         imageAlt: 'LOVOL RG102 EVO multi-crop crawler combine harvester',
@@ -223,7 +224,7 @@
           'Grain loss rate below 1.2%',
         ],
         bestFor: 'Farms that want one machine for both paddy and dryland crops.',
-        brochure: 'https://drive.google.com/file/d/1JxyqCkl3GcbHZNkGO5bChElmWIiRHLKW/view?usp=sharing',
+        brochure: 'brochures/lovol-rg108-plus-brochure.pdf',
         officialPage: 'https://lovol.co.in/shop/harvester-rg108plus',
         image: 'images/machinery/rg108-plus.webp',
         imageAlt: 'LOVOL RG108 PLUS multi-crop crawler combine harvester',
