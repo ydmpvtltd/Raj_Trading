@@ -16,6 +16,10 @@
   <meta property="og:description" content="Authorised dealer for LOVOL Agriculture Machinery in Niali, Cuttack, Odisha. Sales, service, and spare parts.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://rajtrading.in/">
+  <meta property="og:image" content="https://rajtrading.in/lovol.png">
+  <meta property="og:image:alt" content="LOVOL combine harvesters available at Raj Trading">
+  <meta name="twitter:card" content="summary_large_image">
   
   <!-- Canonical Link -->
   <link rel="canonical" href="https://rajtrading.in/">
@@ -23,8 +27,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="rajlogo.jpeg">
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
 
   <!-- Schema.org Structured Data for Local Business SEO -->
   <script type="application/ld+json">
@@ -32,7 +36,7 @@
     "@context": "https://schema.org",
     "@type": "AutoDealer",
     "name": "Raj Trading",
-    "image": "https://lotusgroupeg.com/assets/img/partners/lovol.png",
+    "image": "https://rajtrading.in/lovol_logo.png",
     "@id": "https://rajtrading.in",
     "url": "https://rajtrading.in",
     "telephone": "+919778333974",
@@ -134,7 +138,7 @@
     <!-- Main Nav -->
     <div class="px-4 md:px-8 py-3.5 flex justify-between items-center bg-white">
       <div class="flex items-center gap-2.5 md:gap-4 cursor-pointer max-w-[72%] md:max-w-full" onclick="navigate('home')">
-        <img src="https://lotusgroupeg.com/assets/img/partners/lovol.png" alt="LOVOL Logo" class="h-9 md:h-14 w-auto object-contain shrink-0" />
+        <img src="lovol_logo.png" alt="LOVOL Logo" class="h-9 md:h-14 w-auto object-contain shrink-0" />
         <div class="flex flex-col border-l-2 border-gray-200 pl-2.5 md:pl-4">
           <h1 class="text-base sm:text-lg md:text-3xl font-extrabold text-[#0B5D1E] tracking-tight leading-none mb-1">RAJ TRADING</h1>
           <span class="text-[8.5px] sm:text-[10px] md:text-sm text-gray-600 font-semibold leading-tight">Authorised Dealer for LOVOL Agriculture Machinery</span>
@@ -190,8 +194,8 @@
       <!-- Hero Section -->
       <section class="relative bg-[#1F2933] text-white overflow-hidden">
         <div class="absolute inset-0 bg-[#063B12] overflow-hidden">
-           <img src="https://lovol.co.in/web/image/6889-e7a1595f/FB.svg" alt="Raj Trading Showroom - LOVOL Machinery" class="w-full h-full object-cover opacity-40 animate-slow-zoom" />
-           <div class="absolute inset-0 bg-gradient-to-r from-[#063B12] to-transparent opacity-80 md:opacity-90"></div>
+           <img src="lovol2.webp" alt="" aria-hidden="true" class="absolute bottom-0 right-0 w-full md:w-3/5 h-full object-contain object-bottom md:object-right-bottom opacity-25 md:opacity-70 animate-slow-zoom" />
+           <div class="absolute inset-0 bg-gradient-to-r from-[#063B12] via-[#063B12]/80 to-transparent"></div>
         </div>
         
         <div class="relative z-10 container mx-auto px-5 sm:px-8 py-20 sm:py-28 md:py-36 lg:py-40 flex flex-col items-center md:items-start text-center md:text-left">
@@ -363,7 +367,7 @@
       <section class="bg-[#063B12] text-white py-16 sm:py-20 px-4 text-center">
         <div class="container mx-auto max-w-3xl">
           <i data-lucide="wrench" class="w-16 h-16 mx-auto mb-6 text-[#F2A900]"></i>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Keep Your Agricultural Machinery Working</h1>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Keep Your Agricultural Machinery Working</h2>
           <p class="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
             Raj Trading provides service assistance for agricultural machinery, helping customers with maintenance, repair and machinery support requirements.
           </p>
@@ -400,33 +404,33 @@
               <form id="service-form" class="space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Customer Name *</label>
-                    <input required name="name" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter your name">
+                    <label for="svc-name" class="block text-sm font-semibold text-gray-700 mb-1">Customer Name *</label>
+                    <input required id="svc-name" name="name" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter your name">
                   </div>
                   <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile Number *</label>
-                    <input required name="mobile" type="tel" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter mobile number">
+                    <label for="svc-mobile" class="block text-sm font-semibold text-gray-700 mb-1">Mobile Number *</label>
+                    <input required id="svc-mobile" name="mobile" type="tel" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Enter mobile number">
                   </div>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Machine Type</label>
-                    <select name="type" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base bg-white">
+                    <label for="svc-type" class="block text-sm font-semibold text-gray-700 mb-1">Machine Type</label>
+                    <select id="svc-type" name="type" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base bg-white">
                       <option>Combine Harvester</option>
                       <option>Tractor</option>
                       <option>Other Equipment</option>
                     </select>
                   </div>
                   <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Machine Model</label>
-                    <input name="model" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="e.g. LOVOL 1004">
+                    <label for="svc-model" class="block text-sm font-semibold text-gray-700 mb-1">Machine Model</label>
+                    <input id="svc-model" name="model" type="text" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="e.g. LOVOL 1004">
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-sm font-semibold text-gray-700 mb-1">Description of Issue / Service Required *</label>
-                  <textarea required name="issue" rows="4" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Describe the problem or required maintenance..."></textarea>
+                  <label for="svc-issue" class="block text-sm font-semibold text-gray-700 mb-1">Description of Issue / Service Required *</label>
+                  <textarea required id="svc-issue" name="issue" rows="4" class="w-full p-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0B5D1E] focus:border-transparent outline-none text-base" placeholder="Describe the problem or required maintenance..."></textarea>
                 </div>
 
                 <button type="submit" class="inline-flex items-center justify-center px-6 py-4 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-base touch-manipulation">Send Service Request on WhatsApp</button>
@@ -466,11 +470,11 @@
              <div class="bg-white rounded-2xl shadow-sm p-6 text-[#1F2933]">
                 <h3 class="text-xl font-bold mb-4 text-[#0B5D1E]">Quick Part Enquiry Form</h3>
                 <form id="parts-form" class="space-y-4">
-                  <input required name="name" type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
-                  <input required name="mobile" type="tel" placeholder="Mobile Number" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                  <input required name="name" type="text" placeholder="Your Name" aria-label="Your Name" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                  <input required name="mobile" type="tel" placeholder="Mobile Number" aria-label="Mobile Number" class="w-full p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
                   <div class="flex gap-2">
-                    <input name="model" type="text" placeholder="Machine Model" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
-                    <input name="part" type="text" placeholder="Part No (if known)" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                    <input name="model" type="text" placeholder="Machine Model" aria-label="Machine Model" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
+                    <input name="part" type="text" placeholder="Part No (if known)" aria-label="Part No (if known)" class="w-1/2 p-3 border border-gray-300 rounded-xl text-sm focus:ring-1 focus:ring-[#0B5D1E] outline-none">
                   </div>
                   <div class="border-2 border-dashed border-gray-300 rounded-xl p-4 text-center">
                     <i data-lucide="camera" class="w-6 h-6 mx-auto text-gray-400 mb-2"></i>
@@ -533,8 +537,9 @@
                   <i data-lucide="clock" class="w-6 h-6"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold text-[#1F2933] text-lg">Services</h4>
-                  <p class="text-gray-600 mt-1 text-sm sm:text-base">Sales • Service • Spare Parts</p>
+                  <h4 class="font-bold text-[#1F2933] text-lg">Opening Hours</h4>
+                  <p class="text-gray-600 mt-1 text-sm sm:text-base">Monday – Saturday: 9:00 AM – 7:00 PM</p>
+                  <p class="text-gray-600 text-sm sm:text-base">Sunday: Closed</p>
                 </div>
               </div>
             </div>
@@ -570,7 +575,7 @@
       <div>
         <div class="flex items-center gap-3 mb-4">
           <div class="bg-white px-3 py-1.5 rounded-lg shadow-sm">
-            <img src="https://lotusgroupeg.com/assets/img/partners/lovol.png" alt="LOVOL Logo" class="h-8 w-auto object-contain" />
+            <img src="lovol_logo.png" alt="LOVOL Logo" class="h-8 w-auto object-contain" />
           </div>
           <div class="bg-white px-2.5 py-1.5 rounded-lg shadow-sm flex items-center justify-center">
             <img src="rajlogo.jpeg" alt="Raj Trading Logo" class="h-8 w-8 object-cover rounded" />
@@ -581,10 +586,6 @@
         <p class="text-sm mb-4 leading-relaxed">
           Your trusted partner in agriculture. Providing complete solutions including machinery sales, reliable service support, and genuine spare parts.
         </p>
-        <div class="flex gap-4 mt-6">
-           <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#0B5D1E] cursor-pointer transition-colors"><i data-lucide="facebook" class="w-5 h-5 text-white"></i></div>
-           <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#0B5D1E] cursor-pointer transition-colors"><i data-lucide="instagram" class="w-5 h-5 text-white"></i></div>
-        </div>
       </div>
       
       <div>
@@ -613,6 +614,10 @@
             <i data-lucide="phone" class="w-5 h-5 text-[#F2A900] shrink-0"></i>
             <a href="tel:+919040566787" class="hover:text-white transition-colors">+91 90405 66787</a>
           </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="clock" class="w-5 h-5 text-[#F2A900] shrink-0 mt-0.5"></i>
+            <span>Mon – Sat: 9:00 AM – 7:00 PM<br>Sunday: Closed</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -622,7 +627,7 @@
   </footer>
 
   <!-- Floating Elements -->
-  <a href="https://wa.me/919778333974" target="_blank" rel="noreferrer" class="fixed bottom-20 md:bottom-8 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1DA851] hover:scale-110 transition-all duration-300 touch-manipulation" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919778333974" target="_blank" rel="noreferrer" class="hidden md:block fixed bottom-8 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#1DA851] hover:scale-110 transition-all duration-300 touch-manipulation" aria-label="Chat on WhatsApp">
     <i data-lucide="message-circle" class="w-7 h-7"></i>
   </a>
 
@@ -719,8 +724,19 @@
       lucide.createIcons(); // re-init icons for newly added HTML
     }
 
-    // Navigation Logic
+    // Navigation Logic: each view has its own URL hash (#machinery etc.) so links can be shared and Back works
+    const VIEWS = ['home', 'machinery', 'service', 'parts', 'contact'];
+
     function navigate(viewId) {
+      if (location.hash === '#' + viewId) {
+        showView(viewId);
+      } else {
+        location.hash = viewId; // triggers hashchange -> showView
+      }
+    }
+
+    function showView(viewId) {
+      if (!VIEWS.includes(viewId)) viewId = 'home';
       // Hide all views
       document.querySelectorAll('.page-view').forEach(view => {
         view.classList.remove('active');
@@ -780,6 +796,9 @@
           lucide.createIcons();
       }
     }
+
+    window.addEventListener('hashchange', () => showView(location.hash.slice(1)));
+    if (location.hash) showView(location.hash.slice(1));
 
     // Toast Logic
     let toastTimeout;
