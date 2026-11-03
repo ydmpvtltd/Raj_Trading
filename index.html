@@ -30,14 +30,14 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="rajlogo.jpeg">
   
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link rel="stylesheet" href="css/tailwind.css">
   <script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
 
   <!-- Schema.org Structured Data for Local Business SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoDealer",
+    "@type": "LocalBusiness",
     "name": "Raj Trading",
     "image": "https://ydmpvtltd.github.io/Raj_Trading/rajlogo.jpeg",
     "@id": "https://ydmpvtltd.github.io/Raj_Trading/",
@@ -212,7 +212,7 @@
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-8 font-semibold text-[#1F2933]">
         <button onclick="navigate('home')" class="nav-link text-[#0B5D1E] border-b-2 border-[#0B5D1E] pb-1 hover:text-[#0B5D1E] transition-colors" data-target="home">Home</button>
-        <button onclick="navigate('machinery')" class="nav-link hover:text-[#0B5D1E] transition-colors" data-target="machinery">Machinery</button>
+        <a href="machinery/index.html" class="nav-link hover:text-[#0B5D1E] transition-colors" data-target="machinery">Machinery</a>
         <button onclick="navigate('service')" class="nav-link hover:text-[#0B5D1E] transition-colors" data-target="service">Service</button>
         <button onclick="navigate('parts')" class="nav-link hover:text-[#0B5D1E] transition-colors" data-target="parts">Spare Parts</button>
         <button onclick="navigate('contact')" class="nav-link hover:text-[#0B5D1E] transition-colors" data-target="contact">Contact</button>
@@ -231,7 +231,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 flex-col p-5 animate-fade-in z-50">
       <button onclick="navigate('home')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#0B5D1E] bg-[#EAF4EA] rounded" data-target="home">Home</button>
-      <button onclick="navigate('machinery')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="machinery">Machinery</button>
+      <a href="machinery/index.html" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="machinery">Machinery</a>
       <button onclick="navigate('service')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="service">Service</button>
       <button onclick="navigate('parts')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="parts">Spare Parts</button>
       <button onclick="navigate('contact')" class="mobile-nav-link text-left py-3.5 px-4 text-base font-semibold border-b border-gray-100 text-[#1F2933]" data-target="contact">Contact</button>
@@ -270,9 +270,7 @@
             Raj Trading is an authorised dealer for LOVOL Agriculture Machinery, providing machinery sales, service support and spare parts assistance for farmers and agricultural machinery users.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-slide-up delay-200">
-            <button onclick="navigate('machinery')" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all duration-300 ease-in-out bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full sm:w-auto text-base sm:text-lg touch-manipulation">
-              Explore Machinery
-            </button>
+            <a href="machinery/index.html" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all duration-300 ease-in-out bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full sm:w-auto text-base sm:text-lg touch-manipulation">Explore Machinery</a>
             <a href="https://wa.me/919778333974?text=Hello%20Raj%20Trading%2C%20I%20would%20like%20to%20enquire%20about%20agricultural%20machinery." target="_blank" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all duration-300 ease-in-out bg-[#25D366] text-white hover:bg-[#1DA851] shadow-md w-full sm:w-auto text-base sm:text-lg touch-manipulation">
               <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> WhatsApp Us
             </a>
@@ -307,7 +305,7 @@
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-[#1F2933] mb-3">Machinery Sales</h3>
               <p class="text-gray-600 mb-6 sm:mb-8 flex-grow text-sm sm:text-base">Explore agricultural machinery from LOVOL and enquire about the equipment suited to your farming and harvesting requirements.</p>
-              <button onclick="navigate('machinery')" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-xl transition-all border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] w-full touch-manipulation">Explore Machinery</button>
+              <a href="machinery/index.html" class="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-xl transition-all border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] w-full touch-manipulation">Explore Machinery</a>
             </div>
 
             <!-- Service Card 2 -->
@@ -417,7 +415,7 @@
           <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 leading-tight">Need Agricultural Machinery, Service or Spare Parts?</h2>
           <p class="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10">Talk to Raj Trading today.</p>
           <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-             <button onclick="navigate('machinery')" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all bg-[#F2A900] text-[#1F2933] hover:bg-yellow-500 shadow-md w-full sm:w-auto touch-manipulation">Explore Machinery</button>
+             <a href="machinery/index.html" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all bg-[#F2A900] text-[#1F2933] hover:bg-yellow-500 shadow-md w-full sm:w-auto touch-manipulation">Explore Machinery</a>
              <button onclick="navigate('service')" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all border-2 border-white text-white hover:bg-white hover:text-[#063B12] w-full sm:w-auto touch-manipulation">Book Service</button>
              <a href="https://wa.me/919778333974" target="_blank" class="inline-flex items-center justify-center px-8 py-4 font-semibold rounded-xl transition-all bg-[#25D366] text-white hover:bg-[#1DA851] shadow-md w-full sm:w-auto touch-manipulation">
                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> WhatsApp Us
@@ -678,7 +676,7 @@
         <h4 class="text-white font-bold mb-6 text-lg">Quick Links</h4>
         <ul class="space-y-3 font-medium text-sm sm:text-base">
           <li><button onclick="navigate('home')" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Home</button></li>
-          <li><button onclick="navigate('machinery')" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Machinery</button></li>
+          <li><a href="machinery/index.html" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Machinery</a></li>
           <li><button onclick="navigate('service')" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Service</button></li>
           <li><button onclick="navigate('parts')" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Spare Parts</button></li>
           <li><button onclick="navigate('contact')" class="hover:text-[#F2A900] transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-[#0B5D1E]"></i> Contact</button></li>
@@ -730,6 +728,7 @@
     </button>
   </div>
 
+  <script src="data/harvesters.js"></script>
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
@@ -737,8 +736,16 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
     // Data
+    // Harvester models come from data/harvesters.js. If that file fails to load, show one
+    // general harvester card instead so the rest of the page keeps working.
+    const HARVESTER_PRODUCTS = window.RT_HARVESTERS
+      ? window.RT_HARVESTERS.models.map(model => ({
+          name: 'LOVOL ' + model.name, category: 'Harvesters', desc: model.summary, img: model.image, link: 'machinery/' + model.id + '.html',
+        }))
+      : [{ name: 'LOVOL Combine Harvesters', category: 'Harvesters', desc: 'High-efficiency harvesting for various crops.', img: 'LOVOL Combine Harvester.webp', link: 'machinery/index.html' }];
+
     const PRODUCTS = [
-      { id: 1, name: 'LOVOL Combine Harvester', category: 'Harvesters', desc: 'High-efficiency harvesting for various crops.', img: 'LOVOL Combine Harvester.webp' },
+      ...HARVESTER_PRODUCTS,
       { id: 2, name: 'LOVOL Agricultural Tractor', category: 'Tractors', desc: 'Reliable power for your farming operations.', img: 'LOVOL Agricultural Tractor.jpeg' },
       { id: 3, name: 'Heavy Duty Rotavator', category: 'Farm Equipment', desc: 'Durable soil preparation equipment.', img: 'Heavy Duty Rotavator.webp' },
       { id: 4, name: 'Paddy Transplanter', category: 'Farm Equipment', desc: 'Efficient planting for paddy fields.', img: 'Paddy Transplanter.webp' },
@@ -753,7 +760,7 @@
         const productHTML = `
           <div data-category="${product.category}" class="product-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 overflow-hidden flex flex-col h-full">
             <div class="relative bg-gray-100">
-              <img src="${product.img}" alt="${product.name}" class="w-full h-56 sm:h-64 object-contain mix-blend-multiply bg-white" />
+              <img src="${product.img}" alt="${product.name}" loading="lazy" class="w-full h-56 sm:h-64 object-contain mix-blend-multiply bg-white" />
               <div class="absolute top-4 right-4 bg-[#F2A900] text-[#1F2933] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                 ${product.category}
               </div>
@@ -762,6 +769,7 @@
               <h3 class="text-xl sm:text-2xl font-bold text-[#1F2933] mb-2">${product.name}</h3>
               <p class="text-gray-600 mb-6 flex-grow text-sm sm:text-base">${product.desc}</p>
               <div class="mt-auto space-y-3">
+                ${product.link ? `<a href="${product.link}" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all bg-[#F2A900] text-[#1F2933] hover:bg-yellow-500 shadow-md w-full text-sm sm:text-base touch-manipulation">View Details &amp; Specs</a>` : ''}
                 <a href="https://wa.me/919778333974?text=Hello%20Raj%20Trading%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(product.name)}.%20Please%20share%20specifications%2C%20availability%20and%20price." target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all bg-[#0B5D1E] text-white hover:bg-[#063B12] shadow-md w-full text-sm sm:text-base touch-manipulation">Enquire Now</a>
                 <a href="tel:+919778333974" class="inline-flex items-center justify-center px-6 py-3.5 font-semibold rounded-xl transition-all border-2 border-[#0B5D1E] text-[#0B5D1E] hover:bg-[#EAF4EA] w-full text-sm sm:text-base touch-manipulation">Call to Discuss</a>
               </div>

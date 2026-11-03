@@ -1,0 +1,57 @@
+/* Raj Trading – styles for the /machinery/ pages (Tailwind handles the rest) */
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1F2933;
+  overflow-x: hidden;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #F2A900;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Filter buttons reflect aria-pressed */
+.rt-filter {
+  background: #fff;
+  color: #4B5563;
+  border-color: #E5E7EB;
+}
+.rt-filter:hover { background: #F3F4F6; }
+.rt-filter[aria-pressed="true"] {
+  background: #0B5D1E;
+  color: #fff;
+  border-color: #0B5D1E;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Comparison table: spec names stay visible while scrolling sideways on phones */
+.rt-sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  box-shadow: 1px 0 0 #E5E7EB;
+}
+
+/* FAQ accordion */
+.rt-faq summary { list-style: none; }
+.rt-faq summary::-webkit-details-marker { display: none; }
+.rt-faq[open] .rt-faq-icon { transform: rotate(180deg); }
+
+/* Demo dialog */
+.rt-dialog { margin: auto; border: 0; }
+.rt-dialog::backdrop { background: rgba(6, 59, 18, 0.6); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

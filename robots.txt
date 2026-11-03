@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ydmpvtltd.github.io/Raj_Trading/sitemap.xml
