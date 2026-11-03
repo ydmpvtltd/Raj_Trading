@@ -252,7 +252,7 @@
           'Spacious, low-vibration cab with clear all-round visibility',
         ],
         bestFor: 'Commercial farms and custom-hiring contractors who need high output across many crops.',
-        brochure: 'https://drive.google.com/file/d/1iYuaefmqzMMj8OnoUrK0rkNF7J0cdDgs/view?usp=sharing',
+        brochure: 'brochures/lovol-rg130-evo-brochure.jpg',
         officialPage: 'https://lovol.co.in/shop/harvester-rg130evo',
         image: 'images/machinery/rg130-evo.webp',
         imageAlt: 'LOVOL RG130 EVO professional crawler combine harvester',
